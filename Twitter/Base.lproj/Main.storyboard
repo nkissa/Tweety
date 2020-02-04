@@ -48,10 +48,11 @@
             </objects>
             <point key="canvasLocation" x="-543" y="-278"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="qPn-kR-mTc">
             <objects>
-                <tableViewController id="U4X-f4-QDK" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPl-hd-md4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableViewController id="U4X-f4-QDK" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tmd-DX-Bq6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,27 +72,37 @@
                             <outlet property="delegate" destination="U4X-f4-QDK" id="fAf-eQ-zGS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="RRN-3Q-Q2r"/>
+                    <navigationItem key="navigationItem" title="Home" id="RRN-3Q-Q2r">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Je5-Yc-Y5m">
+                            <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <connections>
+                                <action selector="onLogout:" destination="U4X-f4-QDK" id="GMf-Ho-qqA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cPl-hd-md4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="-278"/>
+            <point key="canvasLocation" x="-543" y="1120"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CTN-CS-OEq">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUE-hR-ymG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="718-xA-Kkg" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Gq-kr-2MF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.21960784310000001" green="0.63137254899999995" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="U4X-f4-QDK" kind="relationship" relationship="rootViewController" id="C2X-Y8-sMW"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WUE-hR-ymG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="310" y="-278"/>
+            <point key="canvasLocation" x="-543" y="432"/>
         </scene>
     </scenes>
 </document>
