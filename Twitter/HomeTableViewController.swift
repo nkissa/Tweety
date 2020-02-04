@@ -16,6 +16,14 @@ class HomeTableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as! TweetCell
+        
+        cell.userNameLabel.text = "Some Name"
+        cell.tweetContent.text = "Somethig else"
+        return cell
+    }
+    
     
 
     @IBAction func onLogout(_ sender: Any) {
@@ -26,11 +34,11 @@ class HomeTableViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 5
     }
 }
