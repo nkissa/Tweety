@@ -44,15 +44,9 @@ class HomeTableViewController: UITableViewController {
             self.tableView.reloadData()
             self.myRefreshControl.endRefreshing()
         }, failure: { (Error) in
-            print("Couldn't load any tweets! Unexpected Error!")
+            print("Couldn't retreive tweets! Unexpected Error!")
         })
     }
-    
-    //New function that was added
-    /*override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.loadTweets()
-    }*/
     
     func loadMoreTweets(){
         let myURL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
